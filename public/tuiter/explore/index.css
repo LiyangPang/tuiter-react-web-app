@@ -1,0 +1,149 @@
+.search-container {
+    position: relative;
+  }
+  
+  /* Style for the input field */
+  input[type="text"] {
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: darkgray;
+    background-color: lightgray;
+    padding-left: 30px; /* Add padding to the left for the icon */
+    padding-right: 30px; /* Add padding to the right for the gear icon */
+  }
+  
+  /* Style for the icons */
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .magnifying-glass {
+    left: 10px; /* Position the magnifying glass on the left */
+    background-image: url("https://em-content.zobj.net/thumbs/160/twitter/31/right-pointing-magnifying-glass_1f50e.png");
+    background-size: cover;
+  }
+  
+  .gear {
+    right: 10px; /* Position the gear icon on the right */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Gear-icon.png"); /* Replace with the path to your gear icon */
+    background-size: cover;
+  }
+
+/* Style for the tabs */
+.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+  }
+  
+  .tabs li {
+    margin-right: 20px;
+  }
+  
+  .tabs li:last-child {
+    margin-right: 0;
+  }
+  
+  /* Style for the tab text */
+  .tab-text {
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  
+  /* Style for the selected tab underline */
+  .tab-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: blue;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Style for the selected tab */
+  .tabs li.selected .tab-text::after {
+    transform: scaleX(1);
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container .text-overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .float-left {
+    float: left;
+ }
+ 
+ .float-right {
+    float: right;
+    
+ }
+ 
+ .float-done {
+    clear: both;
+ }
+
+ .Trending{
+    list-style-type:none;
+ }
+ 
+ .pos-absolute-top-right{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ }
+
+
+
+ .trending-title{
+    color :grey;
+ }
+
+ .trending-topic{
+    font-weight: bold;
+ }
+
+ .tweets-number{
+    color :grey;
+ }
+
+.follow-name{
+  font-weight: bold;
+  position: relative;
+  right :60px;
+}
+
+.follow-id{
+  color :grey;
+  position: relative;
+  right :60px;
+}
