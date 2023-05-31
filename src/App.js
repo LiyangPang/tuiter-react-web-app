@@ -1,28 +1,24 @@
 import logo from './logo.svg';
 import Labs from "./labs"
 import Tuiter from './tuiter';
-import { BrowserRouter, Route , Routes, Link} from 'react-router-dom';
+import { BrowserRouter, Route , Routes, Link, Navigate} from 'react-router-dom';
 import Assignment3 from './labs/a3';
 import Assignment4 from './labs/a4';
-import Navigation from "./nav";
+import Navigation from "./nav1";
+import HelloWorld from './labs/a3/hello-word';
 //import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-    <Navigation/>
-      
-    <div>
-      <Routes>
-        <Route path = "/tuiter" element = {<Tuiter />} />
-        <Route path = "/labs" element = {<Labs />} />
-        <Route path = "/labs/a3" element = {<Assignment3 />} />
-        <Route path = "/labs/a4" element = {<Assignment4 />} />
-      </Routes>
-      
-      
-     
-    </div>
+      <div className="container">
+        <Routes>
+          <Route path="/"         element={<Navigate to="/labs"/>}/>
+          <Route path="/labs/*"   element={<Labs/>}/>
+          <Route path="/hello"    element={<HelloWorld/>}/>
+          <Route path="/tuiter/*" element={<Tuiter/>}/>
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

@@ -1,9 +1,12 @@
-function Tuiter() {
-    return (
-        <div>
-            <h2>Tuiter</h2>
-        </div>
-    );
-}
+import {Link} from "react-router-dom";
+import Nav from "../nav";
 
-export default Tuiter;
+function Tuiter() {
+ return(
+  <div>
+   <Nav/>
+   <h1>Tuiter</h1>
+  </div>
+ )
+}
+export default Tuiter
