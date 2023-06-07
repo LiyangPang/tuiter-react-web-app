@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router";
-import Nav from "../nav";
+
 import NavigationSidebar from "./navigation-sidebar";
 import HomeScreen from "./home-screen";
 import ExploreScreen from "./explore-screen";
@@ -12,7 +12,7 @@ import WhoToFollowList from "./who-to-follow";
 function Tuiter() {
  return (
    <div>
-     <Nav />
+     
      <div className="row">
        <div className="col-2">
          <NavigationSidebar />
