@@ -4,8 +4,8 @@ import {useSelector} from "react-redux";
 
 
 const TuitStats = (tuit) => {
-    
-    return(<h3>{tuit.replies}</h3>);
+    const { tuits } = useSelector(state => state.tuits)
+    return(<h3>{tuits.replies}</h3>);
     
    };
    export default TuitStats;
