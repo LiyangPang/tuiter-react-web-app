@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const SERVER_API_URL = process.env.REACT_APP_SERVER_API_URL;
-const USERS_URL = `http://localhost:4000/api/users`;
+//const USERS_URL = `http://localhost:4000/api/users`;
+const USERS_URL = `https://tuiter-node-server-app-i75b.onrender.com`;
 const TUITS_API = 'http://localhost:4000/api/tuits';
 
 
