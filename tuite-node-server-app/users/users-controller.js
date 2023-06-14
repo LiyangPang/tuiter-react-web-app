@@ -52,7 +52,7 @@ const findUserById = (req, res) => {
 
     app.get('/api/users', findUsers);
 app.get('/api/users/:uid', findUserById);
-app.post(   '/api/users/register', createUser);
+app.post(   '/api/users/create', createUser);
 app.delete( '/api/users/:id', deleteUser);
 app.put(    '/api/users/:id', updateUser);
 }
