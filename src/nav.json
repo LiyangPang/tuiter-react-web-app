@@ -1,4 +1,7 @@
 [
+    { "path": "/login", "label": "Login" },
+    { "path": "/Register", "label": "Register" },
+    { "path": "/Profile", "label": "Profile" },
     { "path": "/tuiter", "label": "Tuiter" },
     { "path": "/labs/a3", "label": "A3" },
     { "path": "/labs/a4", "label": "A4" },
