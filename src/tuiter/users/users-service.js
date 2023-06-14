@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const USER_API = "http://localhost:4000/users";
-const BASE_API = "http://localhost:4000/api";
+const USER_API = "https://tuiter-node-server-app-i75b.onrender.com/api/users";
+const BASE_API = "https://tuiter-node-server-app-i75b.onrender.com/api";
+const TUITS_API = 'https://tuiter-node-server-app-i75b.onrender.com/api/tuits';
 
 const request = axios.create({
   withCredentials: true,
