@@ -7,15 +7,13 @@ import BookmarksScreen from "./bookmarks-screen.js";
 import ProfileScreen from "./profile-screen";
 import WhoToFollowListItem from "./who-to-follow/who-to-follow-list-item";
 import WhoToFollowList from "./who-to-follow";
-import whoReducer from "./reducers/who-reducer";
+
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
-import tuitsReducer from "./reducers/tuits-reducer";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 
-const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer}});
 
 
 function Tuiter() {
@@ -34,7 +32,7 @@ function Tuiter() {
   }
 
  return (
-  <Provider store={store}>
+  
    <div>
      
      <div className="row">
@@ -68,7 +66,7 @@ function Tuiter() {
        </div>}
      </div>
    </div>
-   </Provider>
+   
  );
 }
 export default Tuiter;

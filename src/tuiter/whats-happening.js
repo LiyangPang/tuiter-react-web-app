@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {createTuit} from "./reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 import { FaBeer } from 'react-icons/fa';
 import {AiOutlinePicture} from "react-icons/ai";
@@ -17,9 +17,18 @@ const WhatsHappening = () => {
 
  const tuitClickHandler = () => {
     const newTuit = {
-        tuit: whatsHappening
+        tuit: whatsHappening,
+        image : "nasa.png",
+        userName : "NASA",
+        handle : "@nasa",
+        topic : "Space",
+        time : "2h",
+        liked : false,
+        replies : 0,
+        retuits : 0,
+        likes : 0,
       }
-      dispatch(createTuit(newTuit));
+      dispatch(createTuitThunk(newTuit));
       setWhatsHappening("");
  }
  return (
