@@ -46,8 +46,14 @@ const findUserById = (req, res) => {
         const id = req.params.id;
         const newUser = req.body;
         users = users.map((user) => user._id === id ? {...user,...newUser} : user);
-        res.sendStatus(200);
+        
+        res.json(users);
     }
+
+
+
+
+
 
 
     app.get('/api/users', findUsers);
@@ -55,6 +61,7 @@ app.get('/api/users/:uid', findUserById);
 app.post(   '/api/users/create', createUser);
 app.delete( '/api/users/:id', deleteUser);
 app.put(    '/api/users/:id', updateUser);
+
 }
 
 export default UserController;
