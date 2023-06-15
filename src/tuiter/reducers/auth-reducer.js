@@ -9,8 +9,8 @@ const authSlice = createSlice({
         
     },
     extraReducers: {
-      [loginThunk.fulfilled]: (state, { payload }) => {
-        state.currentUser = payload;
+      [loginThunk.fulfilled]: (state, action) => {
+        state.currentUser = action.payload;
       },
       [logoutThunk.fulfilled]: (state) => {
         state.currentUser = null;
