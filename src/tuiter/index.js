@@ -4,7 +4,7 @@ import NavigationSidebar from "./navigation-sidebar";
 import HomeScreen from "./home-screen";
 import ExploreScreen from "./explore-screen";
 import BookmarksScreen from "./bookmarks-screen.js";
-import ProfileScreen from "./profile-screen";
+import ProfileScreen from "./users/profile";
 import WhoToFollowListItem from "./who-to-follow/who-to-follow-list-item";
 import WhoToFollowList from "./who-to-follow";
 

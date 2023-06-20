@@ -4,7 +4,8 @@ import {
   loginThunk,
   profileThunk,
   logoutThunk,
-  registerThunk
+  registerThunk,
+  updateUserThunk
 } from "./users-thunks";
 
 const initialState = {
@@ -41,6 +42,14 @@ const usersSlice = createSlice({
         state.loading = false;
         state.error = null;
       },
+
+    [updateUserThunk.fulfilled]: (state, action) => {
+      state.currentUser = action.payload;
+      state.loading = false;
+      state.error = null;
+    },
+
+    
 
     [getUsersThunk.fulfilled]: (state, action) => {
       state.users = action.payload;

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const USER_API = "https://tuiter-node-server-app-i75b.onrender.com/api/users";
+const USERS_URL = `http://localhost:4000/api/users`;
 const BASE_API = "https://tuiter-node-server-app-i75b.onrender.com/api";
 const TUITS_API = 'https://tuiter-node-server-app-i75b.onrender.com/api/tuits';
 
@@ -39,6 +40,6 @@ export const deleteUser = async (id) => {
 };
 
 export const updateUser = async (id, user) => {
-  const response = await axios.put(`${USER_API}/${id}`, user);
+  const response = await axios.put(`${USERS_URL}/${id}`, user);
   return response.data;
 };
