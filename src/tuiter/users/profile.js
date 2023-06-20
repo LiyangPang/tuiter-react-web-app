@@ -10,6 +10,15 @@ function ProfileScreen() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+  const handleUpdate = () => {
+    try {
+      dispatch(updateUserThunk(profile));
+    } catch (e) {
+      alert(e);
+    }
+  };
+
+
     return (
         <div>
          <h1>Profile Screen</h1>
@@ -35,12 +44,12 @@ function ProfileScreen() {
              }}/>
            </div></div>
          )}
-         <button
+         <button className="btn btn-danger"
           onClick={() => {
             dispatch(logoutThunk());
             navigate("/login");
           }}>                   Logout</button>
-         <button >Save  </button>
+         <button onclick = {handleUpdate()} className="btn btn-primary" >Update  </button>
          <pre>{JSON.stringify(currentUser, null, 2)}</pre>
         </div> );
 }
